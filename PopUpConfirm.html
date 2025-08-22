@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*   const masuk = confirm("Apakah anda ingin melanjutkan?");
+                                                                                                if (masuk) {
+                                                                                                    const name = prompt("Masukkan name anda:");
+                                                                                                    alert("Selamat datang " + name);
+                                                                                                    document.writeln("Selamat datang " + name);
+                                                                                                } else {
+                                                                                                    alert("Anda telah membatalkan.");
+                                                                                                    document.writeln("Anda telah membatalkan.");
+                                                                                                }
+                                                                                         */
+        const nilai = prompt("Masukkan nilai UTS:");
+        const nilaiUAS = prompt("Masukkan nilai UAS:");
+
+        const nilaiAkhir = (parseFloat(nilai) + parseFloat(nilaiUAS)) / 2;
+
+
+        if (nilaiAkhir >= 75) {
+            alert("Anda lulus dengan nilai akhir: " + nilaiAkhir);
+            document.writeln("Anda lulus dengan nilai akhir: " + nilaiAkhir);
+        } else {
+            alert("Anda tidak lulus, nilai akhir: " + nilaiAkhir);
+            document.writeln("Anda tidak lulus, nilai akhir: " + nilaiAkhir);
+        }
+    </script>
+</body>
+
+</html>

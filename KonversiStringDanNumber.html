@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konversi bilangan number dan string</title>
+</head>
+
+<body>
+    <script>
+        let angka = 100;
+        // Konversi string ke number
+        let angka2 = parseInt("200");
+
+        let hasil = angka + angka2; // Hasilnya adalah "100200" karena angka2 adalah string
+        console.info(hasil);
+        document.writeln(hasil);
+
+        document.writeln(`<p>${parseFloat("3.14")}</p>`); // Konversi string ke float
+        document.writeln(`<p>${Number("123")}</p>`); // Konversi string ke number
+        document.writeln(`<p>${Number("123abc")}</p>`); // Konversi string ke number, hasilnya NaN
+        document.writeln(`<p>${Number("abc123")}</p>`); // Konversi string ke number, hasilnya NaN
+        document.writeln(`<p>${Number(true)}</p>`); // Konversi boolean ke number, hasilnya 1
+        document.writeln(`<p>${Number(false)}</p>`); // Konversi boolean ke number, hasilnya 0
+        document.writeln(`<p>${Number(null)}</p>`); // Konversi null ke number, hasilnya 0
+        document.writeln(`<p>${Number(undefined)}</p>`); // Konversi undefined ke number, hasilnya NaN
+
+        // konversi number ke string
+        const a = 2;
+        const b = 2;
+        const hasil2 = a.toString() + b.toString(); // Hasilnya adalah 22 karena a dan b adalah number
+
+        document.writeln(`<p>${String(hasil2)}</p>`); // Konversi number ke string
+
+        const c = Number("hurup");
+        const g = 100;
+        const hasil5 = c + g;
+        document.writeln(`<p>${String(hasil5)}</p>`); // Konversi number ke string, hasilnya NaN
+        document.writeln(`<p>${isNaN(c)}</p>`); // Mengecek apakah c adalah NaN, hasilnya true
+        document.writeln(`<p>${isNaN(hasil5)}</p>`); // Mengecek apakah hasil5 adalah NaN, hasilnya false
+        document.writeln(`<p>${isNaN(g)}</p>`); // Mengecek apakah g adalah NaN, hasilnya false
+
+
+        const nilaiUAS = 60;
+        const nilaiUTS = 70;
+        const hasilAkhir = (nilaiUAS + nilaiUTS) / 2; // Hasilnya adalah "9080" karena nilaiUAS adalah string
+        // const nilaisemua = hasilAkhir / 2; // Hasilnya adalah 90 karena nilaiUTS dibagi 2 terlebih dahulu
+        // document.writeln(`<p>${hasilAkhir}</p>`); // Hasilnya adalah 90 karena nilaiUTS dibagi 2 terlebih dahulu
+
+        if (hasilAkhir >= 80) {
+            document.writeln(`<p>Selamat, Anda lulus dengan nilai akhir: ${hasilAkhir} (A)</p>`);
+        } else if (hasilAkhir >= 70) {
+            document.writeln(`<p>Anda lulus dengan nilai akhir: ${hasilAkhir} (B)</p>`);
+        } else if (hasilAkhir >= 60) {
+            document.writeln(`<p>Anda lulus dengan nilai akhir: ${hasilAkhir} (C)</p>`);
+        } else {
+            document.writeln(`<p>Maaf, Anda tidak lulus dengan nilai akhir: ${hasilAkhir}</p>`);
+        }
+    </script>
+</body>
+
+</html>

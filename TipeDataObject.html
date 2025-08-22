@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipe Data Object</title>
+</head>
+
+<body>
+    <script>
+        const person = {
+            name: "Muhammad Enuh",
+            age: 20,
+            isStudent: true,
+            hobbies: ["reading", "coding", "gaming"],
+            address: {
+                street: "Jl. Contoh No. 123",
+                city: "Kota Contoh",
+                country: "Negara Contoh"
+            }
+        };
+        /*  person["name"] = "Muhammad Enuh";
+         person["age"] = 20;
+         person["isStudent"] = true;
+
+         delete person.isStudent; */
+
+        console.table(person);
+        console.info("Nama Lengkap: ",
+            person.name);
+    </script>
+</body>
+
+</html>

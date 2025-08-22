@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operator Logika </title>
+</head>
+
+<body>
+    <script>
+        const nilaiUjian = 80;
+        const nilaiAbsensi = 90;
+
+        const lulusUjian = nilaiUjian >= 75;
+        if (lulusUjian) {
+            document.writeln("Anda lulus ujian!</br>");
+        } else {
+            document.writeln("Maaf, Anda tidak lulus ujian.");
+        }
+        const lulusAbsensi = nilaiAbsensi >= 80;
+        if (lulusAbsensi) {
+            document.writeln("Anda lulus absensi!</br>");
+        } else {
+            document.writeln("Maaf, Anda tidak lulus absensi.");
+        }
+        const lulus = lulusUjian && lulusAbsensi;
+        if (lulus) {
+            document.writeln("Selamat, Anda lulus!");
+        } else {
+            document.writeln("Maaf, Anda tidak lulus.");
+        }
+    </script>
+</body>
+
+</html>

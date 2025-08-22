@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program Latihan</title>
+</head>
+
+<body>
+    <script>
+        const nilaiKehadiran = 80;
+        const nilaiTugas = 90;
+        const nilaiUTS = 85;
+        const nilaiUAS = 95;
+
+        const nilaiAkhir = (nilaiKehadiran * 0.3) + (nilaiTugas * 0.3) + (nilaiUTS * 0.2) + (nilaiUAS * 0.2);
+
+        if (nilaiAkhir >= 80) {
+            document.writeln(`Selamat, Anda lulus dengan nilai akhir: ${nilaiAkhir} (A)`);
+        } else if (nilaiAkhir >= 70) {
+            document.writeln(`Anda lulus dengan nilai akhir: ${nilaiAkhir} (B)`);
+        } else if (nilaiAkhir >= 60) {
+            document.writeln(`Anda lulus dengan nilai akhir: ${nilaiAkhir} (C)`);
+        } else {
+            document.writeln(`Maaf, Anda tidak lulus dengan nilai akhir: ${nilaiAkhir}`);
+        }
+
+        const identitasMahasiswa = ["Muhammad Enuh", "123456789", "Teknik Informatika", "2024"];
+        console.info(identitasMahasiswa);
+
+        document.writeln(`<p>Nama: ${identitasMahasiswa[0]}</p>`);
+        document.writeln(`<p>NIM: ${identitasMahasiswa[1]}</p>`);
+        document.writeln(`<p>Program Studi: ${identitasMahasiswa[2]}</p>`);
+        document.writeln(`<p>Nilai Akhir: ${nilaiAkhir}</p>`);
+    </script>
+</body>
+
+</html>
