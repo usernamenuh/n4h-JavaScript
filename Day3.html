@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan Sederhana</title>
+</head>
+<body>
+    <script>
+        const menu = {
+            nasiGoreng: 15000,
+            mieGoreng: 12000,
+            ayamGoreng: 20000,
+            esTeh: 5000,
+            esJeruk: 7000
+        };
+
+        let pesanan = [];
+        let totalHarga = 0;
+
+        for (let i = 1; i <= 3; i++) {
+            let item = prompt("Masukan Pesanan"); // Simulasi input pesanan
+            pesanan.push(item);
+            totalHarga += menu[item];
+        }
+
+        let diskon = 0;
+        if (totalHarga >= 50000) {
+            diskon = totalHarga * 0.1;
+        }
+
+        let hargaAkhir = totalHarga - diskon;
+        document.writeln("Pesanan: " + pesanan.join(", ") + "<br>");
+        document.writeln("Total Harga: Rp " + totalHarga + "<br>");
+        document.writeln("Diskon: Rp " + diskon + "<br>");
+        document.writeln("Harga Akhir: Rp " + hargaAkhir + "<br>");
+    </script>
+</body>
+</html>

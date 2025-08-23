@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nullis Kualising Operator</title>
+</head>
+
+<body>
+    <script>
+        let parameter = "Nuh"; // This variable is explicitly set to null
+        let result = parameter;
+
+        if (parameter === null || parameter === undefined) {
+            result = "Default Value"; // Assign a default value if parameter is null or undefined
+        }
+
+        document.writeln("The result is: " + result);
+
+        let hasil = parameter ?? "Default Value"; // Using nullish coalescing operator
+        document.writeln("The result is: " + hasil);
+    </script>
+</body>
+
+</html>

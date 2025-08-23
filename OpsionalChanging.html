@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opsional Chainging</title>
+</head>
+
+<body>
+    <script>
+        const person = {
+            country: 'Indonesia',
+            address: {
+                country: 'Indonesia',
+                city: 'Jakarta',
+                street: 'Jl. Merdeka'
+            }
+        };
+
+        let country = person?.address?.country; // Using optional chaining to safely access nested property
+
+        let indonesia = person?.address?.country === 'Indonesia' ? 'Yes' : 'No';
+
+        document.writeln(`<p>${country}</p>`);
+        document.writeln(`<p>${indonesia}</p>`);
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch</title>
+</head>
+
+<body>
+    <script>
+        const nilaiUTS = 60;
+        const nilaiUAS = 90;
+        const nilaiAkhir = (nilaiUTS + nilaiUAS) / 2;
+        switch (true) {
+            case nilaiAkhir >= 80:
+                document.writeln(`Nilai Akhir: ${nilaiAkhir}(A)`);
+                break;
+            case nilaiAkhir >= 70:
+                document.writeln(`Nilai Akhir: ${nilaiAkhir} (B)`);
+                break;
+            case nilaiAkhir >= 60:
+                document.writeln(`Nilai Akhir: ${nilaiAkhir} (C)`);
+                break;
+            case nilaiAkhir >= 50:
+                document.writeln(`Nilai Akhir: ${nilaiAkhir} (D)`);
+                break;
+            default:
+                document.writeln(`Nilai Akhir: ${nilaiAkhir} (E)`);
+                break;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>In</title>
+</head>
+
+<body>
+    <script>
+        const mahasiswa = {
+            nama: "Nuh",
+            umur: 20,
+            jurusan: "Teknik Informatika"
+        };
+        if ("nama" in mahasiswa) {
+            alert(`Hello, ${mahasiswa.nama}!`);
+        } else {
+            alert("Nama tidak ditemukan dalam objek mahasiswa.");
+        }
+
+        const person = [null, "NuH", null];
+        const hasil = 0 in person;
+        document.writeln(`Apakah indeks 0 ada dalam array person? ${hasil ? "Ya" : "Tidak"}`);
+    </script>
+</body>
+
+</html>
