@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+        let siswa = [];
+let input;
+
+do {
+  input = prompt("Masukkan nama siswa (ketik 'selesai' untuk berhenti):");
+
+  if (input && input.toLowerCase() !== "selesai") {
+    let status = prompt(`Apakah ${input} hadir? (ya/tidak)`);
+    siswa.push({
+      name: input,
+      hadir: status.toLowerCase() === "ya" // true kalau ya
+    });
+  }
+} while (input && input.toLowerCase() !== "selesai");
+
+// Hitung jumlah hadir dan tidak hadir
+let hadirCount = 0;
+let tidakHadirCount = 0;
+
+for (let i = 0; i < siswa.length; i++) {
+  if (siswa[i].hadir) {
+    hadirCount++;
+  } else {
+    tidakHadirCount++;
+  }
+}
+
+// Tampilkan hasil
+console.log("=== Rekap Absensi ===");
+siswa.forEach(s => {
+  console.log(`${s.name}: ${s.hadir ? "Hadir" : "Tidak Hadir"}`);
+});
+
+console.log(`Total Hadir: ${hadirCount}`);
+console.log(`Total Tidak Hadir: ${tidakHadirCount}`);
+
+if (hadirCount / siswa.length > 0.7) {
+  console.log("✅ Kelas bisa dimulai");
+} else {
+  console.log("❌ Kelas ditunda");
+}
+
+    </script>
+    </body>
+</html>
