@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studi Kasus Mini</title>
+</head>
+<body>
+    <script>
+        const mahasiswa = {
+            andi: 90,
+            budi: 85,
+            caca: 95,
+            dodi: 80
+        }
+
+        let total = 0;
+        let jumlah = 0;
+
+        for (const nama in mahasiswa) {
+            document.writeln(`${nama} : ${mahasiswa[nama]}<br>`);
+            total += mahasiswa[nama];
+            jumlah++;
+        }
+
+        const rataRata = total / jumlah;
+        document.writeln(`Total Nilai: ${total}<br>`);
+        document.writeln(`Rata-rata Nilai: ${rataRata}<br>`);
+    </script>
+</body>
+</html>

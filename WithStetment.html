@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>With Stetment</title>
+</head>
+<body>
+    <script>
+        const person = {
+            firstName: "Muhammad",
+            lastName: "Enuh",
+            age: 20
+        }
+
+        with (person) {
+            document.writeln(`First Name: ${firstName}<br>`);
+            document.writeln(`Last Name: ${lastName}<br>`);
+            document.writeln(`Age: ${age}<br>`);
+        }
+    </script>
+</body>
+</html>

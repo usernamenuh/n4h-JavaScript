@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For In</title>
+</head>
+<body>
+    <script>
+        const person = {
+            firstName: "Muhammad",
+            lastName: "Enuh",
+            age: 20
+        }
+
+        for (const hasil in person) {
+            document.writeln(`${hasil} : ${person[hasil]}<br>`);
+        }
+
+        const buah = ["Pisang", "Apel", "Jeruk"];
+        for (const index in buah) {
+            document.writeln(`${index} : ${buah[index]}<br>`);
+        }
+    </script>
+</body>
+</html>
