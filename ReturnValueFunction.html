@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Return Value Function</title>
+    </head>
+    <body>
+        <script>
+        function sayHelloWord(firstName, lastName) {
+            const fullName = `${firstName} ${lastName}`;
+            return fullName;
+        }
+
+        const name1 = sayHelloWord("Muhammad", "Enuh");
+        document.writeln(`<p>Hello ${name1}</p>`);
+
+
+        function finalResult(value) {
+            if (value > 70) {
+                return "A";
+            } else if (value > 60) {
+                return "B";
+            } else if (value > 50) {
+                return "C";
+            } else if (value > 40) {
+                return "D";
+            } else {
+                return "E";
+            }
+        }
+
+
+        const result1 = finalResult(70);
+        document.writeln(`<p>Final Result: ${result1}</p>`);
+    </script>
+    </body>
+</html>
