@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Scope</title>
+    </head>
+    <body>
+        <script>
+            // Scope adalah tempat dimana sebuah variabel dideklarasikan
+            // Scope ada 2 macam yaitu global scope dan local scope
+            let counter = 0;
+
+            function increment() {
+                // counter adalah variabel global
+                // bisa diakses dari dalam fungsi ini
+                // local scope
+                counter++;
+                console.info(`Counter: ${counter}`);
+            }
+
+            function decrement() {
+                // counter adalah variabel global
+                // bisa diakses dari dalam fungsi ini
+                // local scope
+                counter--;
+                console.info(`Counter: ${counter}`);
+            }
+
+            increment();
+            increment();
+
+            function first() {
+                // Local scope
+                let name = "Nuh";
+            }
+
+            function second() {
+                // Local scope
+                let sayHello = "Hello Nuh";
+            }
+
+            name = "Enuh"; // Error karena name adalah variabel local scope
+            sayHello = "Hello Enuh"; // Error karena sayHello adalah variabel local scope
+        </script>
+    </body>
+</html>

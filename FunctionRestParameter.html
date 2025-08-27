@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Rest Parameter</title>
+</head>
+<body>
+    <script>
+        function sum(name, ...values) {
+            let total = 0;
+            for (const value of values) {
+                total += value;
+            }
+            document.writeln(`<p>Hello ${name} Nilai ${total}</p>`);
+        }
+
+        const nilai = [10, 20, 30, 40, 50];
+        sum("Muhammad", ...nilai);
+        sum("Muhammad", 10, 20, 30, 40, 50);
+
+        function oldsum() {
+            let total = 0;
+            for (const value of arguments) {
+                total += value;
+            }
+            document.writeln(`<p>Old Sum Nilai ${total}</p>`);
+        }
+
+        oldsum(10, 20, 30, 40, 50);
+    </script>
+</body>
+</html>
