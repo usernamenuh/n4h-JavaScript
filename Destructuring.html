@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring</title>
+</head>
+<body>
+    <script>
+        {
+        const names = ["Muhammad", "Enuh", "Nuh", "Eka", "Saputra"];
+        const [firstName, middleName, lastName, ...others] = names;
+
+        console.info(firstName);
+        console.info(middleName);
+        console.info(lastName);
+        console.info(others);
+        }
+
+        {
+            // Destructuring object
+            const person = {
+                name: "Muhammad",
+                age: 20,
+                address: {
+                    city: "Bandung",
+                    country: "Indonesia",
+                },
+                hobby: ["Coding", "Reading", "Gaming"]
+            };
+
+            const {name, age, address:{city, country}, ...other} = person;
+            console.info(name);
+            console.info(age);
+            console.info(city);
+            console.info(country);
+            console.info(other);
+        }
+
+        {
+            // Destructuring function
+            function displayPerson({name, age, address:{city, country}, hobby}) {
+                console.info(name);
+                console.info(age);
+                console.info(city);
+                console.info(country);
+                console.info(hobby);
+            }
+
+            const person = {
+                name: "Muhammad",
+                age: 20,
+                address: {
+                    city: "Bandung",
+                    country: "Indonesia",
+                },
+                hobby: ["Coding", "Reading", "Gaming"]
+            };
+            displayPerson(person);
+        }
+
+        {
+            function sum([a, b]) {
+                return a + b;
+            }
+
+            const numbers = [10, 20];
+            console.info(sum(numbers));
+        }
+
+        {
+            // Default value
+            const names = ["Muhammad"];
+            // Default value middleName = "Enuh", lastName = "Nuh"
+            const [firstName, middleName = "Enuh", lastName = "Nuh"] = names;
+
+            console.info(firstName);
+            console.info(middleName);
+            console.info(lastName);
+        }
+
+        {
+            // Destructuring default value object
+            const person = {
+                firstName: "Muhammad",
+                lastName: "Enuh",
+            };
+
+            // Default value age = 20
+            const {firstName, age = 20, lastName,} = person;
+            console.info(firstName);
+            console.info(lastName);
+            console.info(age);
+        }
+
+        {
+            // Destructuring default value object
+            const person = {
+                firstName: "Muhammad",
+                lastName: "Enuh",
+            };
+
+            // Mangubah nama variable
+            const {firstName: namadepan, age: usia = 20, lastName: namabelakang,} = person;
+            console.info(namadepan);
+            console.info(namabelakang);
+            console.info(usia);
+        }
+    </script>
+</body>
+</html>

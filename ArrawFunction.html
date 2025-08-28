@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function</title>
+</head>
+<body>
+    <script>
+        const say = (name) => {
+            document.writeln(`<p>Hello ${name}</p>`);
+        }
+
+        say("Muhammad Enuh");
+
+        const giveMeName = (callback) => {
+            callback("Nuh")
+        }
+
+        // Anonynous function
+        giveMeName(function(name) {
+            document.writeln(`<p>Hello ${name}</p>`);
+        });
+
+        // Arrow function
+        giveMeName((name) => {
+            document.writeln(`<p>Hello ${name}</p>`);
+        });
+
+        giveMeName(say);
+
+        giveMeName((name) => {
+            document.writeln(`<p>Hello ${name}</p>`);
+        }); 
+
+
+        const sum = (a, b) => a + b;
+        document.writeln(`<p>Sum : ${sum(10, 10)}</p>`);
+    </script>
+</body>
+</html>

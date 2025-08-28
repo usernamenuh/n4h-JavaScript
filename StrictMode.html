@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strick Mode</title>
+</head>
+<body>
+    <script>
+        function run() {
+            "use strict";
+            // x = 10; // error karena x tidak dideklarasikan
+            let y = 20; // benar karena y dideklarasikan dengan let
+            console.info(y);
+
+            const person = {
+                name: "Muhammad Enuh",
+                age: 20
+            };
+            // delete person.age; // error karena tidak bisa menghapus properti pada objek
+
+            with (person) {
+                // console.info(name); // error karena with tidak diizinkan di strict mode
+            }
+        }
+    </script>
+</body>
+</html>

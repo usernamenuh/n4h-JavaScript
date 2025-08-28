@@ -15,6 +15,15 @@
             return result;
         }
         console.info(faktorialLoop(5)); // 120
+
+        function faktorialrecursive(value) {
+            if (value === 1) {
+                return 1;
+            } else {
+                return value * faktorialrecursive(value - 1);
+            }
+        }
+        console.info(faktorialrecursive(5)); // 120
     </script>
 </body>
 </html>
